@@ -1,0 +1,12 @@
+{
+  "name": "marchayek",
+  "version": "0.0.1",
+  "devDependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "angular": "~1.4.1",
+    "lodash": "~3.9.3",
+    "angular-bootstrap": "~0.13.0",
+    "angular-ui-router": "~0.2.15"
+  },
+  "dependencies": {}
+}

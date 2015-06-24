@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html id="ng-app" ng-app="app" ng-controller="AppController" ng-csp>
+  <head>
+    <title ng-bind="pageTitle"></title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- inject:css -->
+    <!-- endinject -->
+    
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+    <!-- inject:js -->
+    <!-- endinject -->
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar navbar-default">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" ng-init="menuCollapsed = true"
+            ng-click="menuCollapsed = ! menuCollapsed">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-brand">
+            Marc Hayek
+            <small>
+  
+            </small>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse" collapse="menuCollapsed">
+          <ul class="nav navbar-nav">
+            <li ui-sref-active="active">
+              <a href ui-sref="home">
+                <i class="fa fa-home"></i>
+                Home
+              </a>
+            </li>
+            <li ui-sref-active="active">
+              <a href ui-sref="about">
+                <i class="fa fa-info-circle"></i>
+                About Me
+              </a>
+            </li>
+            <li ui-sref-active="active">
+              <a href ui-sref="education">
+                <i class="fa fa-info-circle"></i>
+                Education
+              </a>
+            </li>
+            <li ui-sref-active="active">
+              <a href ui-sref="work">
+                <i class="fa fa-info-circle"></i>
+                Employment
+              </a>
+            </li>
+            <li ui-sref-active="active">
+              <a href ui-sref="skills">
+                <i class="fa fa-info-circle"></i>
+                Skills
+              </a>
+            </li>
+            <li ui-sref-active="active">
+              <a href ui-sref="projects">
+                <i class="fa fa-info-circle"></i>
+                Projects
+              </a>
+            </li>
+            <li ui-sref-active="active">
+              <a href ui-sref="contact">
+                <i class="fa fa-info-circle"></i>
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" ui-view="main"></div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          Footer
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
