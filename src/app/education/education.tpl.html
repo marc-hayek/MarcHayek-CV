@@ -1,0 +1,6 @@
+<div ng-repeat="item in ::list ">
+	<h1>{{item.name}}</h1>
+	<h2>{{item.degree}}-{{item.date}}</h2>
+	<h3 ng-show="item.total_gpa > 0">{{item.total_gpa}}-{{item.major_gpa}}</h3>
+	<p ng-show="item.honors.length > 0 ">{{item.honors}}</p>
+</div>

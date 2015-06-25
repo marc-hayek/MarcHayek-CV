@@ -1,0 +1,8 @@
+<div ng-repeat="(category,categoryContent) in ::list">
+	<h1>{{category}}</h1>
+	
+	<div ng-repeat="item in categoryContent">
+		<p>{{item.name}}</p>
+		<p>{{item.proficiency}}</p>
+	</div>
+</div>

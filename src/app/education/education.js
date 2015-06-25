@@ -19,5 +19,5 @@ angular.module('app.education',['ui.router','templates-app'])
 }])
 .controller('EducationController',['$scope','$rootScope','educationInstance',
 	function($scope,$rootScope,educationInstance){
-
+		$scope.list=educationInstance;
 }]);

@@ -1,0 +1,7 @@
+<div ng-repeat="item in ::list">
+	<h1>{{item.name}}</h1>
+	<h3>{{item.description}}</h3>
+	<p>{{item.tools}}</p>
+	<a ng-href="{{item.demoURL}}" ng-show="item.demoURL.length > 0">Check It Out!</a>
+	<a ng-href="{{item.githubURL}}" ng-show="item.githubURL.length > 0">See the Code on Github</a>
+</div>

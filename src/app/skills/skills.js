@@ -19,4 +19,5 @@ angular.module('app.skills',['ui.router','templates-app'])
 }])
 .controller('SkillsController',['$scope','$rootScope','skillsInstance',
 	function($scope,$rootScope,skillsInstance){
+		$scope.list=skillsInstance;
 }]);

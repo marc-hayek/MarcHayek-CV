@@ -1,0 +1,8 @@
+<div ng-repeat="item in ::list">
+	<h1>{{item.company_name}}</h1>
+	<h2>{{item.position}}</h2>
+	<p>{{item.date}}</p>
+	<ul ng-repeat="accomplishment in item.accomplishments">
+		<li>{{accomplishment}}</li>
+	</ul>
+</div>

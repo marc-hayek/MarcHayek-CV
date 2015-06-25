@@ -19,4 +19,5 @@ angular.module('app.projects',['ui.router','templates-app'])
 }])
 .controller('ProjectsController',['$scope','$rootScope','projectsInstance',
 	function($scope,$rootScope,projectsInstance){
+		$scope.list=projectsInstance;
 }]);
