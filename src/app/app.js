@@ -1,12 +1,16 @@
 angular.module( 'app', [
   'templates-app',
+  'ui.bootstrap',
   'app.home',
   'app.about',
   'app.contact',
   'app.education',
   'app.projects',
   'app.skills',
-  'app.work'
+  'app.work',
+  'ngAnimate',
+  'angular-timeline',
+  'angular-scroll-animate'
 ])
 
 .config(['$stateProvider','$urlRouterProvider', function( $stateProvider, $urlRouterProvider ) {

@@ -1,8 +1,18 @@
-<div ng-repeat="item in ::list">
-	<h1>{{item.company_name}}</h1>
-	<h2>{{item.position}}</h2>
-	<p>{{item.date}}</p>
-	<ul ng-repeat="accomplishment in item.accomplishments">
-		<li>{{accomplishment}}</li>
-	</ul>
-</div>
+<timeline>
+		<timeline-event ng-repeat="item in ::list">
+	    <timeline-badge class="info" when-visible="animateElementIn" when-not-visible="animateElementOut">
+	      <i class="fa fa-check"></i>
+	    </timeline-badge>
+	    <timeline-panel class="info" when-visible="animateElementIn" when-not-visible="animateElementOut">
+	      <timeline-heading>
+	        <h4>{{item.company_name}}</h4>
+	        <img class="company-logo" ng-src="{{::item.logo}}">
+	      </timeline-heading>
+	      <p>{{item.position}}</p>
+	      <p>{{item.date}}</p>
+	      <ul ng-repeat="accomplishment in item.accomplishments">
+			<li>{{accomplishment}}</li>
+		</ul>
+	    </timeline-panel>
+	  </timeline-event>
+</timeline>

@@ -8,81 +8,81 @@ angular.module('app')
 				"Compiled Languages":[
 					{
 						name:"C++/C#",
-						proficiency:0.5
+						proficiency:50
 					},
 					{
 						name:"Java",
-						proficiency:0.5
+						proficiency:50
 					},
 				],
 				"Web Development":[
 					{
 						name:"Javascript",
-						proficiency:0.5
+						proficiency:50
 					},
 					{
 						name:"JQuery",
-						proficiency:0.5
+						proficiency:50
 					},
 					{
 						name:"MySQL",
-						proficiency:0.5
+						proficiency:50
 					},
 					{
 						name:"PHP",
-						proficiency:0.5
+						proficiency:50
 					},
 					{
 						name:"NodeJS",
-						proficiency:0.5
+						proficiency:50
 					},
 					{
 						name:"HTML/CSS",
-						proficiency:0.5
+						proficiency:50
 					},
 				],
 				"Tools and Frameworks":[
 					{
 						name:"Codigniter",
-						proficiency:0.5
+						proficiency:50
 					},
 					{
 						name:"Backbone JS",
-						proficiency:0.5
+						proficiency:50
 					},
 					{
 						name:"Angular JS",
-						proficiency:0.5
+						proficiency:50
 					},
 					{
 						name:"Git",
-						proficiency:0.5
+						proficiency:50
 					},
 					{
 						name:"Redis",
-						proficiency:0.5
+						proficiency:50
 					},
 					{
 						name:"Linux",
-						proficiency:0.5
+						proficiency:50
 					},
 					{
 						name:"AWS (EC2,S3,SQS,RDS)",
-						proficiency:0.5
+						proficiency:50
 					}
 				],
 				"Languages":[
 					{
 						name:"English",
-						proficiency:0.5
+						proficiency:50
 					},
 					{
 						name:"Arabic",
-						proficiency:0.5
+						proficiency:50
 					},
 					{
 						name:"French",
-						proficiency:0.5
+						proficiency:50
 					}
 				]
 			},

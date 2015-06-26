@@ -20,4 +20,14 @@ angular.module('app.work',['ui.router','templates-app'])
 .controller('WorkController',['$scope','$rootScope','workInstance',
 	function($scope,$rootScope,workInstance){
 		$scope.list=workInstance;
+
+		$scope.animateElementIn = function($el) {
+			$el.removeClass('hidden');
+			$el.addClass('bounce-in');
+		};
+
+		$scope.animateElementOut = function($el) {
+			$el.addClass('hidden');
+			$el.removeClass('bounce-in');
+		};
 }]);

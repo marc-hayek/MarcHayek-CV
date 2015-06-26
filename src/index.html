@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
     <!-- inject:css -->
     <!-- endinject -->
     
@@ -18,8 +18,7 @@
 
   </head>
   <body>
-    <div class="container">
-      <div class="navbar navbar-default">
+      <div class="navbar navbar-default navbar-fixed-top">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" ng-init="menuCollapsed = true"
             ng-click="menuCollapsed = ! menuCollapsed">
@@ -28,63 +27,50 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <div class="navbar-brand">
-            Marc Hayek
-            <small>
-  
-            </small>
-          </div>
         </div>
         <div class="collapse navbar-collapse" collapse="menuCollapsed">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav nav-center">
             <li ui-sref-active="active">
               <a href ui-sref="home">
-                <i class="fa fa-home"></i>
                 Home
               </a>
             </li>
             <li ui-sref-active="active">
               <a href ui-sref="about">
-                <i class="fa fa-info-circle"></i>
                 About Me
               </a>
             </li>
             <li ui-sref-active="active">
               <a href ui-sref="education">
-                <i class="fa fa-info-circle"></i>
                 Education
               </a>
             </li>
             <li ui-sref-active="active">
               <a href ui-sref="work">
-                <i class="fa fa-info-circle"></i>
                 Employment
               </a>
             </li>
             <li ui-sref-active="active">
               <a href ui-sref="skills">
-                <i class="fa fa-info-circle"></i>
                 Skills
               </a>
             </li>
             <li ui-sref-active="active">
               <a href ui-sref="projects">
-                <i class="fa fa-info-circle"></i>
                 Projects
               </a>
             </li>
             <li ui-sref-active="active">
               <a href ui-sref="contact">
-                <i class="fa fa-info-circle"></i>
                 Contact
               </a>
             </li>
           </ul>
         </div>
       </div>
-    </div>
+    
 
-    <div class="container" ui-view="main"></div>
+    <div class="custom_container slide" ui-view="main"></div>
 
     <footer class="footer">
       <div class="container">

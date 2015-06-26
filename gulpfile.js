@@ -21,6 +21,8 @@ var gulp = require('gulp'),
     beep    = require('beepbeep'),
     watch = require('gulp-watch'),
     stripDebug = require('gulp-strip-debug');
+    imagemin = require('gulp-imagemin');
+    pngquant = require('imagemin-pngquant');
     argv = require('yargs').argv;
 
 
@@ -43,10 +45,13 @@ var getVendorStream = function(){
     return gulp.src([
       config.current_path+'vendor/jquery/dist/jquery.min.js',
       config.current_path+'vendor/angular/angular.js',
+      config.current_path+'vendor/angular-animate/angular-animate.min.js',
+      config.current_path+'vendor/angular-timeline/dist/angular-timeline.js',
       config.current_path+'vendor/angular-ui-router/release/angular-ui-router.min.js',
       config.current_path+'vendor/lodash/lodash.min.js',
       config.current_path+'vendor/angular-bootstrap/ui-bootstrap.min.js',
-      config.current_path+'vendor/angular-bootstrap/ui-bootstrap-tpls.min.js'
+      config.current_path+'vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
+      config.current_path+'vendor/angular-scroll-animate/dist/angular-scroll-animate.js',
       ],{base: "."});
       
 };
@@ -67,12 +72,28 @@ gulp.task("sass-dev",function(){
     .pipe(gulp.dest('./build/assets'));
 });
 
+gulp.task("images-dev",function(){
+    return gulp.src('./src/assets/img/**/*.{png,PNG,jpeg,JPEG,jpg,JPG,gif}')
+    .pipe(gulp.dest('./build/assets/img'));
+});
+
 gulp.task("sass-prod",function(){
     return gulp.src('./src/sass/main.scss')
     .pipe(sass())
     .pipe(minifycss())
     .pipe(rename(pack.name+'-'+versionPack.version+".css"))
     .pipe(gulp.dest('./bin/assets'));
+});
+
+
+gulp.task("images-prod",function(){
+      return gulp.src('./src/assets/img/**/*.{png,PNG,jpeg,JPEG,jpg,JPG,gif}')
+            .pipe(imagemin({
+                progressive: true,
+                svgoPlugins: [{removeViewBox: false}],
+                use: [pngquant()]
+            }))
+            .pipe(gulp.dest('./bin/assets/img'));
 });
 
 
@@ -216,9 +237,9 @@ gulp.task('bump', function(){
 });
 
 gulp.task('build-dev',function(callback){
-  return runSequence('clean-dev',['copy-scripts-dev','copy-templates-dev','sass-dev'],'index-dev', callback);
+  return runSequence('clean-dev',['copy-scripts-dev','copy-templates-dev','sass-dev','images-dev'],'index-dev', callback);
 });
 
 gulp.task('build-prod',function(){
-    runSequence('bump','copy-templates-dev',['scripts-prod','sass-prod'],'index-prod', function() {});
+    runSequence('bump','copy-templates-dev',['scripts-prod','sass-prod','images-prod'],'index-prod', function() {});
 });
