@@ -1,7 +1,38 @@
-<div ng-repeat="item in ::list">
-	<h1>{{item.name}}</h1>
-	<h3>{{item.description}}</h3>
-	<p>{{item.tools}}</p>
-	<a ng-href="{{item.demoURL}}" ng-show="item.demoURL.length > 0">Check It Out!</a>
-	<a ng-href="{{item.githubURL}}" ng-show="item.githubURL.length > 0">See the Code on Github</a>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1">
+			<div class="selected-project" ng-show="selectedProject > -1">
+				<div class="back" ng-click="resetSelected()"><i class="fa fa-chevron-left"></i> Back To Projects</div>
+				<div >
+					<div class="project-details">
+						<div class="row">
+							<div class="col-sm-8">
+									<h1>{{list[selectedProject].name}}</h1>
+									<h4>{{list[selectedProject].description}}</h4>
+									<img class="project-image" ng-src="{{list[selectedProject].imageURL}}">
+							</div>
+							<div class="col-sm-4 tools-section">
+								<h4>{{list[selectedProject].tools}}</h4>
+								<div><a ng-href="{{list[selectedProject].demoURL}}" ng-show="list[selectedProject].demoURL.length > 0" target="_blank">Give it a Run!</a></div>
+								<div><a ng-href="{{list[selectedProject].githubURL}}" ng-show="list[selectedProject].githubURL.length > 0" target="_blank">See the Code on Github</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div ng-show="selectedProject==-1">
+				<div class="section-header">
+					Check Out Some of My Projects
+				</div>
+				<div class="row">
+					<div class="col-sm-6" ng-repeat="item in ::list">
+						<div class="project-card" ng-click="setSelected($index)">
+							<img class="project-image" ng-src="{{item.imageURL}}">
+							<span class="project-card-overlay">{{item.name}}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

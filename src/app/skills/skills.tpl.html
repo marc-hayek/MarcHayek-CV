@@ -1,16 +1,19 @@
 <div class="container">
 	<div class="row">
+		<div class="section-header">
+			List of My Skills and Tools
+		</div>
 		<div class="col-sm-10 col-sm-offset-1">
 			<div ng-repeat="(category,categoryContent) in ::list">
-		<h1>{{category}}</h1>
-		
-		<div ng-repeat="item in categoryContent">
-			<p>{{item.name}}</p>
-			<div class="row">
-				<div class="col-sm-4"><progressbar value="item.proficiency"></progressbar></div>
+				<h2>{{category}}</h2>
+
+				<div ng-repeat="item in categoryContent">
+					<h4>{{item.name}}</h4>
+					<div class="row">
+						<div class="col-sm-12"><progressbar value="item.proficiency"></progressbar></div>
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
 		</div>
 	</div>
 </div>

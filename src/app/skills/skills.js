@@ -14,7 +14,7 @@ angular.module('app.skills',['ui.router','templates-app'])
 				}
 			}
 		},
-		data:{ pageTitle: 'skills' }
+		data:{ pageTitle: 'Skills' }
 	});
 }])
 .controller('SkillsController',['$scope','$rootScope','skillsInstance',

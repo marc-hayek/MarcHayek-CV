@@ -18,19 +18,19 @@ angular.module('app')
 				"Web Development":[
 					{
 						name:"Javascript",
-						proficiency:50
+						proficiency:70
 					},
 					{
 						name:"JQuery",
-						proficiency:50
+						proficiency:70
 					},
 					{
 						name:"MySQL",
-						proficiency:50
+						proficiency:70
 					},
 					{
 						name:"PHP",
-						proficiency:50
+						proficiency:70
 					},
 					{
 						name:"NodeJS",
@@ -38,13 +38,13 @@ angular.module('app')
 					},
 					{
 						name:"HTML/CSS",
-						proficiency:50
+						proficiency:70
 					},
 				],
 				"Tools and Frameworks":[
 					{
 						name:"Codigniter",
-						proficiency:50
+						proficiency:70
 					},
 					{
 						name:"Backbone JS",
@@ -52,15 +52,15 @@ angular.module('app')
 					},
 					{
 						name:"Angular JS",
-						proficiency:50
+						proficiency:70
 					},
 					{
 						name:"Git",
-						proficiency:50
+						proficiency:60
 					},
 					{
 						name:"Redis",
-						proficiency:50
+						proficiency:70
 					},
 					{
 						name:"Linux",
@@ -74,15 +74,15 @@ angular.module('app')
 				"Languages":[
 					{
 						name:"English",
-						proficiency:50
+						proficiency:100
 					},
 					{
 						name:"Arabic",
-						proficiency:50
+						proficiency:90
 					},
 					{
 						name:"French",
-						proficiency:50
+						proficiency:30
 					}
 				]
 			},
