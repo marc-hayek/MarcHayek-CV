@@ -17,8 +17,8 @@ angular.module('app.work',['ui.router','templates-app'])
 		data:{ pageTitle: 'Work' }
 	});
 }])
-.controller('WorkController',['$scope','$rootScope','workInstance',
-	function($scope,$rootScope,workInstance){
+.controller('WorkController',['$scope','$rootScope','$window','workInstance',
+	function($scope,$rootScope,$window,workInstance){
 		$scope.list=workInstance;
 
 		$scope.animateElementIn = function($el) {
@@ -29,5 +29,9 @@ angular.module('app.work',['ui.router','templates-app'])
 		$scope.animateElementOut = function($el) {
 			$el.addClass('hidden');
 			$el.removeClass('bounce-in');
+		};
+
+		$scope.scrollUp=function(){
+			$window.scrollTo(0,0)
 		};
 }]);

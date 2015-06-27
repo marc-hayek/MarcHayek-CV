@@ -4,8 +4,17 @@ angular.module('app')
 	function($q,$http){
 
 		var Contact={
+			contact_info:{
+				address:"Beit El Chaar, El Metn",
+				city:"Beirut, Lebanon",
+				telephone:"+961 70945322",
+				email:"marchayek90@gmail.com",
+				facebookURL:"https://www.facebook.com/marc.hayek.988",
+				linkedInURL:"http://lb.linkedin.com/pub/marc-hayek/61/1b/b5",
+				githubURL:"https://github.com/marc-hayek"
+			},
 			getAll:function(){
-				return [];
+				return this.contact_info;
 			},
 
 			sendEmail:function(variables){

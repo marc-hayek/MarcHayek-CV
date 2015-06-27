@@ -9,10 +9,10 @@ body{
 	background: url('img/concrete_seamless.png');
 	background-repeat: repeat;
 	color:#535353;
-
 }
 
 ul.timeline{
+	/*margin-bottom: 50px;*/
 	ul{
 		list-style-type: disc;
 	}
@@ -35,6 +35,20 @@ ul.timeline{
 	.hidden{
 		display: block !important;
   		opacity: 0;
+	}
+}
+
+.timeline-end{
+	width: 100%;
+	text-align: center;
+	.arrow{
+		display: inline-block;
+		font-size: 30px;
+		padding: 10px;
+		cursor: pointer;
+		&:hover{
+			color:black;
+		}
 	}
 }
 
@@ -93,14 +107,16 @@ ul.timeline{
 }
 
 .education{
-	background-color: white;
-	padding: 20px;
+	
 	.school{
+		background-color: white;
+		padding: 10px;
+		margin-bottom: 10px;
 		position: relative;
 		.logo{
 			position: absolute;
-			top: 0px;
-			right: 0px;
+			top: 10px;
+			right: 10px;
 			width: 100px;
 		}
 		.gpa{
@@ -194,6 +210,13 @@ ul.timeline{
 	}
 }
 
+.contact-info{
+	.fa{
+		margin-right: 10px;
+		font-size: 16px;
+		width: 16px;
+	}
+}
 
 
 @media (min-width: 768px){
@@ -234,6 +257,8 @@ ul.timeline{
 		.school{
 			margin-bottom: 20px; 
 			.logo{
+				right: 0;
+				left: 10px;
 				position: relative;
 				display: block;
 			}

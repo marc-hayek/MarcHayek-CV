@@ -3,15 +3,15 @@
 		<div class="section-header">
 			Education
 		</div>
-		<div class="col-sm-10 col-sm-offset-1 education">
-			<div class="school" ng-repeat="item in ::list ">
+		<div class="col-sm-10 col-sm-offset-1 education" ng-cloak>
+			<div class="school " ng-repeat="item in ::list ">
 				<img class="logo" ng-src="{{item.logoURL}}">
 				<h2 class="name">{{item.name}}</h2>
 				<div class="date">{{item.date}}</div>
 				<h4 class="degree">{{item.degree}}</h4>
 				<div class="gpa" ng-show="item.total_gpa > 0">GPA:{{item.total_gpa}} Major GPA:{{item.major_gpa}}</div>
 				<div class="honors" ng-show="item.honors.length > 0 ">{{item.honors}}</div>
-				<div class="courses" ng-show="item.courses.length > 0 "><h4>Relevant Courswork:</h4>{{item.courses}}</div>
+				<div class="courses" ng-show="item.courses.length > 0 "><h4>Relevant Coursework:</h4>{{item.courses}}</div>
 			</div>
 		</div>
 	</div>

@@ -1,9 +1,10 @@
 <div class="section-header">
 	
 </div>
-<timeline>
+<timeline ng-cloak>
 		<timeline-event ng-repeat="item in ::list">
 	    <timeline-badge class="info" when-visible="animateElementIn" when-not-visible="animateElementOut">
+	    	{{item.year}}
 	    </timeline-badge>
 	    <timeline-panel class="info" when-visible="animateElementIn" when-not-visible="animateElementOut">
 	      <timeline-heading>
@@ -18,3 +19,6 @@
 	    </timeline-panel>
 	  </timeline-event>
 </timeline>
+<div class="timeline-end">
+	<div class="arrow" ng-click="scrollUp()"><i class="fa fa-arrow-up"></i></div>
+</div>

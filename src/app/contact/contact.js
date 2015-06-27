@@ -19,6 +19,7 @@ angular.module('app.contact',['ui.router','templates-app'])
 }])
 .controller('ContactController',['$scope','$rootScope','contactInstance','Contact',
 	function($scope,$rootScope,contactInstance,Contact){
+	$scope.contactInfo=contactInstance;
 	$scope.variables={
 		result:"",
 		resultMessage:"",

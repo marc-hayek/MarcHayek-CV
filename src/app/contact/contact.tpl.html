@@ -4,7 +4,9 @@
             Contact Me
         </div>
         <div class="col-sm-10 col-sm-offset-1">
-            <div class="panel panel-default">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="panel panel-default">
                 <div class="panel-heading">
                     <h2 class="panel-title">Send Me a Message</h2>
                 </div>
@@ -43,6 +45,18 @@
                         </div>
                     </form>
                     <p ng-class="variables.result" style="padding: 15px; margin: 0;">{{ variables.resultMessage }}</p>
+                </div>
+            </div>
+                </div>
+                <div class="col-sm-6 contact-info">
+                    <h4>Contact Info</h4>
+                    <p><i class="fa fa-phone"></i>{{::contactInfo.telephone}}</p>
+                    <p><i class="fa fa-home"></i>{{::contactInfo.address}}</p>
+                    <p><i class="fa fa-globe"></i>{{::contactInfo.city}}</p>
+                    <p><i class="fa fa-envelope"></i><a ng-href="mailto:{{::contactInfo.email}}">{{::contactInfo.email}}</a></p>
+                    <p><i class="fa fa-facebook"></i><a ng-href="{{::contactInfo.facebookURL}}" target="_blank">Facebook</a></p>
+                    <p><i class="fa fa-linkedin"></i><a ng-href="{{::contactInfo.linkedInURL}}" target="_blank">LinkedIn</a></p>
+                    <p><i class="fa fa-github"></i><a ng-href="{{::contactInfo.githubURL}}" target="_blank">Github</a></p>
                 </div>
             </div>
         </div>

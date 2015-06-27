@@ -9,6 +9,7 @@ angular.module('app')
 					company_name:"Et3arraf.com",
 					position:"Software Engineer",
 					date:"October 2013 - Present",
+					year:"Now",
 					logo:"assets/img/et3arraf-logo.png",
 					accomplishments:[
 						"Responsible for the planning, development, and implementation of the web platform (front-end + back-end), as well as database and system administration for one of the fastest growing social network startups in the Middle East, serving over 210,000 registered users.",
@@ -21,6 +22,7 @@ angular.module('app')
 					company_name:"Et3arraf.com",
 					position:"Part Time Developer",
 					date:"March 2013 - June 2013",
+					year:"2013",
 					logo:"assets/img/et3arraf-logo.png",
 					accomplishments:[
 						"Built a prototype mobile app using Backbone JS and Phonegap."
@@ -30,6 +32,7 @@ angular.module('app')
 					company_name:"Expeditors International",
 					position:"Management Training Program",
 					date:"October 2012 - October 2013",
+					year:"2012",
 					logo:"assets/img/Expeditors-logo.png",
 					accomplishments:[
 						"One of 3 people selected from over 200 candidates to join Expeditors' leadership and management rotational program at EMAIR regional HQ in Beirut. Held rotational positions in sales, warehousing and distribution, import/export operations.",
@@ -41,6 +44,7 @@ angular.module('app')
 					company_name:"Petrofac Engineering and Construction",
 					position:"Electrical Engineer, Intern",
 					date:"July 2011 - August 2011",
+					year:"2011",
 					logo:"assets/img/petrofac-logo.jpg",
 					accomplishments:[
 						"Supervised the installation of various electrical equipment and modules across the site while ensuring that proper safety precautions were followed."
