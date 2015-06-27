@@ -218,6 +218,20 @@ ul.timeline{
 	}
 }
 
+.skills{
+	.proficiency-container{
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	.name{
+		font-size: 16px;
+	}
+	.proficiency{
+		font-size: 16px;
+		float: right;
+	}
+}
+
 
 @media (min-width: 768px){
     .navbar-nav{

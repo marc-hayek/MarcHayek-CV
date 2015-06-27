@@ -3,14 +3,16 @@
 		<div class="section-header">
 			List of My Skills and Tools
 		</div>
-		<div class="col-sm-10 col-sm-offset-1" ng-cloak>
+		<div class="col-sm-10 col-sm-offset-1 skills" ng-cloak>
 			<div ng-repeat="(category,categoryContent) in ::list">
 				<h2>{{category}}</h2>
 
 				<div ng-repeat="item in categoryContent">
-					<h4>{{item.name}}</h4>
+					<div class="proficiency-container">
+						<span class="name">{{item.name}}</span><span class="proficiency">{{item.proficiency}}/100</span>
+					</div>
 					<div class="row">
-						<div class="col-sm-12"><progressbar value="item.proficiency"></progressbar></div>
+						<div class="col-sm-12"><progressbar type="info" value="item.proficiency"></progressbar></div>
 					</div>
 				</div>
 			</div>

@@ -12,6 +12,7 @@ angular.module('app.about',['ui.router','templates-app'])
     data:{ pageTitle: 'About Me' }
   });
 }])
-.controller('AboutController',['$scope','$rootScope',
-  function($scope,$rootScope){
+.controller('AboutController',['$scope','$rootScope','$window',
+  function($scope,$rootScope,$window){
+    $window.scrollTo(0,0);
 }]);

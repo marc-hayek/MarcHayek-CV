@@ -17,7 +17,8 @@ angular.module('app.home',['ui.router','templates-app'])
     data:{ pageTitle: 'Home' }
   });
 }])
-.controller('HomeController',['$scope','$rootScope','contactInstance',
-  function($scope,$rootScope,contactInstance){
+.controller('HomeController',['$scope','$rootScope','contactInstance','$window',
+  function($scope,$rootScope,contactInstance,$window){
     $scope.contactInfo=contactInstance;
+    $window.scrollTo(0,0);
 }]);

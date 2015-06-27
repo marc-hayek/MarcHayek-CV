@@ -36,7 +36,7 @@ angular.module('app.contact',['ui.router','templates-app'])
         	Contact.sendEmail($scope.variables);
         } else {
             $scope.submitButtonDisabled = false;
-            $scope.resultMessage = 'Failed :( Please fill out all the fields.';
+            $scope.resultMessage = 'Failed. Please fill out all the fields.';
             $scope.result='bg-danger';
         }
         e.preventDefault();

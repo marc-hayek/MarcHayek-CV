@@ -17,8 +17,9 @@ angular.module('app.projects',['ui.router','templates-app','ngAnimate'])
 		data:{ pageTitle: 'Projects' }
 	});
 }])
-.controller('ProjectsController',['$scope','$rootScope','projectsInstance',
-	function($scope,$rootScope,projectsInstance){
+.controller('ProjectsController',['$scope','$rootScope','projectsInstance','$window',
+	function($scope,$rootScope,projectsInstance,$window){
+		$window.scrollTo(0,0);
 		$scope.list=projectsInstance;
 
 		$scope.selectedProject=-1;

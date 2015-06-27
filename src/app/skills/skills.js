@@ -17,7 +17,8 @@ angular.module('app.skills',['ui.router','templates-app'])
 		data:{ pageTitle: 'Skills' }
 	});
 }])
-.controller('SkillsController',['$scope','$rootScope','skillsInstance',
-	function($scope,$rootScope,skillsInstance){
+.controller('SkillsController',['$scope','$rootScope','skillsInstance','$window',
+	function($scope,$rootScope,skillsInstance,$window){
 		$scope.list=skillsInstance;
+		$window.scrollTo(0,0);
 }]);

@@ -9,7 +9,7 @@
 				<h2 class="name">{{item.name}}</h2>
 				<div class="date">{{item.date}}</div>
 				<h4 class="degree">{{item.degree}}</h4>
-				<div class="gpa" ng-show="item.total_gpa > 0">GPA:{{item.total_gpa}} Major GPA:{{item.major_gpa}}</div>
+				<div class="gpa" ng-show="item.total_gpa > 0">GPA : {{item.total_gpa}} <span style="margin-left:10px">Major GPA : {{item.major_gpa}}</span></div>
 				<div class="honors" ng-show="item.honors.length > 0 ">{{item.honors}}</div>
 				<div class="courses" ng-show="item.courses.length > 0 "><h4>Relevant Coursework:</h4>{{item.courses}}</div>
 			</div>

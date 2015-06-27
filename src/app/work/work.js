@@ -19,6 +19,7 @@ angular.module('app.work',['ui.router','templates-app'])
 }])
 .controller('WorkController',['$scope','$rootScope','$window','workInstance',
 	function($scope,$rootScope,$window,workInstance){
+		$window.scrollTo(0,0);
 		$scope.list=workInstance;
 
 		$scope.animateElementIn = function($el) {
@@ -32,6 +33,6 @@ angular.module('app.work',['ui.router','templates-app'])
 		};
 
 		$scope.scrollUp=function(){
-			$window.scrollTo(0,0)
+			$window.scrollTo(0,0);
 		};
 }]);
