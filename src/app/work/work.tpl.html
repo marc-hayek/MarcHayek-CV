@@ -4,12 +4,11 @@
 <timeline>
 		<timeline-event ng-repeat="item in ::list">
 	    <timeline-badge class="info" when-visible="animateElementIn" when-not-visible="animateElementOut">
-	      <i class="fa fa-check"></i>
 	    </timeline-badge>
 	    <timeline-panel class="info" when-visible="animateElementIn" when-not-visible="animateElementOut">
 	      <timeline-heading>
-	        <h4>{{item.company_name}}</h4>
 	        <img class="company-logo" ng-src="{{::item.logo}}">
+	        <h4>{{item.company_name}}</h4>
 	      </timeline-heading>
 	      <p>{{item.position}}</p>
 	      <p>{{item.date}}</p>

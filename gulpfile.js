@@ -1,7 +1,8 @@
 var gulp = require('gulp'),
-    sass = require('gulp-ruby-sass'),
+    sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
+    cssimport = require("gulp-cssimport");
     minifyHtml = require("gulp-minify-html"),
     jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),
@@ -69,6 +70,7 @@ var getAppStream = function(){
 gulp.task("sass-dev",function(){
     return gulp.src('./src/sass/main.scss')
     .pipe(sass())
+    .pipe(cssimport())
     .pipe(gulp.dest('./build/assets'));
 });
 
@@ -156,16 +158,15 @@ gulp.task('index-dev', function () {
     './build/assets/templates/*js'
   ]);
   //config.current_path=""
-  return target.pipe(inject(series(getVendorStream(), getAppStream(),templates,styles),{relative:true}))
+  return target.pipe(inject(series(getVendorStream(), getAppStream(),templates,styles),{relative:true,ignorePath:"../build/"}))
     .pipe(gulp.dest('./build'));
 });
 
 gulp.task('index-prod', function () {
   var target = gulp.src('./src/index.html');
-  // It's not necessary to read the files (will speed up things), we're only after their paths:
   var sources = gulp.src(['./bin/assets/'+pack.name+'-'+versionPack.version+'.js', './bin/assets/'+pack.name+'-'+versionPack.version+'.css'], {read: false});
 
-  return target.pipe(inject(sources))
+  return target.pipe(inject(sources,{relative:true,ignorePath:"../bin/"}))
     .pipe(gulp.dest('./bin'));
 });
 

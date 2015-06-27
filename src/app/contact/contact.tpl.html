@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <div class="section-header">
+            Contact Me
+        </div>
+        <div class="col-sm-10 col-sm-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Send Me a Message</h2>
+                </div>
+                <div class="panel-body">
+                    <form ng-submit="submit(contactform,$event)" name="contactform" method="post" class="form-horizontal" role="form">
+                        <div class="form-group" ng-class="{ 'has-error': contactform.inputName.$invalid && variables.submitted }">
+                            <label for="inputName" class="col-lg-2 control-label">Name</label>
+                            <div class="col-lg-10">
+                                <input ng-model="variables.formData.inputName" type="text" class="form-control" id="inputName" name="inputName" placeholder="Your Name" required>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': contactform.inputEmail.$invalid && variables.submitted }">
+                            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                            <div class="col-lg-10">
+                                <input ng-model="variables.formData.inputEmail" type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': contactform.inputSubject.$invalid && variables.submitted }">
+                            <label for="inputSubject" class="col-lg-2 control-label">Subject</label>
+                            <div class="col-lg-10">
+                                <input ng-model="variables.formData.inputSubject" type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Subject Message" required>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': contactform.inputMessage.$invalid && variables.submitted }">
+                            <label for="inputMessage" class="col-lg-2 control-label">Message</label>
+                            <div class="col-lg-10">
+                                <textarea ng-model="variables.formData.inputMessage" class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Your message..." required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                                <button type="submit" class="btn btn-default" ng-disabled="variables.submitButtonDisabled">
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <p ng-class="variables.result" style="padding: 15px; margin: 0;">{{ variables.resultMessage }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

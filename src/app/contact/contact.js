@@ -17,7 +17,29 @@ angular.module('app.contact',['ui.router','templates-app'])
 		data:{ pageTitle: 'Contact' }
 	});
 }])
-.controller('ContactController',['$scope','$rootScope','contactInstance',
-	function($scope,$rootScope,contactInstance){
+.controller('ContactController',['$scope','$rootScope','contactInstance','Contact',
+	function($scope,$rootScope,contactInstance,Contact){
+	$scope.variables={
+		result:"",
+		resultMessage:"",
+		formData:{},
+		submitButtonDisabled:false,
+		submitted:false,
+	};
+	
+    $scope.submit = function(contactform,e) {
+  
+        $scope.submitted = true;
+        $scope.submitButtonDisabled = true;
+        if (contactform.$valid) {
+        	Contact.sendEmail($scope.variables);
+        } else {
+            $scope.submitButtonDisabled = false;
+            $scope.resultMessage = 'Failed :( Please fill out all the fields.';
+            $scope.result='bg-danger';
+        }
+        e.preventDefault();
+    };
+
 
 }]);

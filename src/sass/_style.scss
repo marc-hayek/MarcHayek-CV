@@ -92,6 +92,27 @@ ul.timeline{
 	}
 }
 
+.education{
+	background-color: white;
+	padding: 20px;
+	.school{
+		position: relative;
+		.logo{
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			width: 100px;
+		}
+		.gpa{
+			font-style: italic;
+			margin-bottom: 5px;
+		}
+		.honors{
+			margin-bottom: 5px;
+		}
+	}
+}
+
 
 .selected-project{
 	.back{
@@ -108,6 +129,71 @@ ul.timeline{
 		width: 100%;
 	}
 }
+
+.profile-pic{
+	display: block;
+	width: 250px;
+	margin: 0px auto;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	margin-bottom: 20px;
+}
+
+.about-text{
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.banner{
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  width: 85%;
+  padding-bottom: 30px;
+}
+
+.home{
+	text-align: center;
+	margin-top: 100px;
+	.header{
+		font-size: 90px;
+	}
+	.sub-header{
+		font-size: 30px;
+		padding: 20px; 
+	}
+	.social{
+		color: black;
+		font-size: 30px;
+		padding: 20px 10px 20px 10px;
+		li{
+			display:inline-block;
+			margin: 0 15px;
+	  		padding: 0;
+	  		a{
+	  			text-decoration: none;
+	  			color:#636363;
+	  		}
+	  		&:hover{
+	  			a{
+	  				color: black;
+	  			}
+	  		}
+		}
+	}
+	.learn-more{
+		cursor: pointer;
+		font-size: 20px;
+		a{
+			text-decoration: none;
+			color: darkgray;
+			font-style: italic;
+		}
+	}
+}
+
 
 
 @media (min-width: 768px){
@@ -126,4 +212,32 @@ ul.timeline{
 			margin-top: 10px;
 		}
 	}
+
+	.home{
+		margin-top: 20px;
+		.header{
+			font-size: 50px;
+		}
+	}
+
+	.custom_container{
+		padding: 70px 10px 20px 10px;
+	}
+	ul.timeline li .company-logo{
+		display: block;
+		padding-left: 10px;
+		position: relative;
+		width: 110px;
+	}
+
+	.education{
+		.school{
+			margin-bottom: 20px; 
+			.logo{
+				position: relative;
+				display: block;
+			}
+		}
+	}
+
 }

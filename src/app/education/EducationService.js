@@ -11,7 +11,9 @@ angular.module('app')
 					date:"2008-2012",
 					total_gpa:3.34,
 					major_gpa:3.42,
-					honors:"Dean's Honor List: Spring 08/09, Fall 11/12"
+					honors:"Dean's Honor List: Spring 08/09, Fall 11/12",
+					logoURL:"assets/img/aub.png",
+					courses:"Database Systems; Data Structures and Algorithms; Computer Networks; Cryptography and Computer Security; Software Engineering; Computer Architecture"
 				},
 				{
 					name:"International College",
@@ -19,7 +21,8 @@ angular.module('app')
 					date:"1993-2008",
 					total_gpa:"",
 					marjor_gpa:"",
-					honors:""
+					honors:"",
+					logoURL:"assets/img/ic.jpg"
 				}
 			],
 			getAll:function(){
