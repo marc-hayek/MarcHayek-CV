@@ -11,5 +11,8 @@
     "angular-animate": "~1.4.1",
     "angular-scroll-animate": "~0.9.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "resolutions": {
+    "angular": "1.4.1"
+  }
 }
