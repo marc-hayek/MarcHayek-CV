@@ -7,9 +7,9 @@ by [Marc Hayek](mailto:marchayek90@gmail.com)
 2. [Configuration](#2-configuration)
 3. [Building the Application](#3-build-the-application)
 
-## II. Deployment
+## II. Demo
 
-1. [Test](#1-description)
+1. [See the Demo in Action](cv.marchayek.me)
 
 
 ### 1. Setting Up Local Environment
@@ -39,7 +39,7 @@ by [Marc Hayek](mailto:marchayek90@gmail.com)
     or http (add your account username)
 
     ```
-    https://github.com/(username)MarcHayek-CV.git  
+    git clone https://github.com/(username)MarcHayek-CV.git  
     ```
 
 ### 2. Configuration
