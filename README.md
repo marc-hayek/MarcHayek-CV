@@ -66,13 +66,13 @@ by [Marc Hayek](mailto:marchayek90@gmail.com)
 	
 	The development build will compile all the project files into the ```build``` folder
     
-    To build the app files for development environment, run the following command in the main folder
+    To build the app files for a development environment, run the following command in the main folder
     
     ```
     $ gulp build-dev
     ```
     
-    You can also run the following command if you want you to build the code on every code change
+    You can also run the following command if you want to automatically build the code on every code change
     
     ```
     $ gulp watch
@@ -88,7 +88,7 @@ by [Marc Hayek](mailto:marchayek90@gmail.com)
 	
 	The production build will compile all the project files into the ```bin``` folder
     
-    To build the app files for Production Environment, run the following command in the main folder
+    To build the app files for a production environment, run the following command in the main folder
     
     ```
     $ gulp build-prod
