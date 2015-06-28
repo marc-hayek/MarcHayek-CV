@@ -14,7 +14,7 @@ angular.module('app.work',['ui.router','templates-app'])
 				}
 			}
 		},
-		data:{ pageTitle: 'Work' }
+		data:{ pageTitle: 'Employment' }
 	});
 }])
 .controller('WorkController',['$scope','$rootScope','$window','workInstance',
