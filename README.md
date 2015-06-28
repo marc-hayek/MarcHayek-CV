@@ -9,7 +9,7 @@ by [Marc Hayek](mailto:marchayek90@gmail.com)
 
 ## II. Demo
 
-1. [See the Demo in Action](cv.marchayek.me)
+[See the Demo in Action](http://cv.marchayek.me)
 
 
 ### 1. Setting Up Local Environment
